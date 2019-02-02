@@ -1,0 +1,192 @@
+body {
+  background: #f9f9f9;
+}
+
+.container-fluid {
+  background: #f9f9f9;
+  text-align: center;
+}
+.container-fluid .hPirates {
+  font: 400 100px/1.3 "Arizonia", Helvetica, sans-serif;
+  color: #7c7fa7;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.container-fluid #borderedImage {
+  background-image: url("hotelEntrance.jpg");
+  height: 500px;
+  width: 100%;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.container-fluid .buttonStyles {
+  width: 10%;
+  margin-left: 45%;
+  border: none;
+  font-weight: 700;
+  color: #fff;
+  background: #e04f67;
+  transition: all 0.3s;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.container-fluid .buttonStyles:hover {
+  cursor: pointer;
+  background-color: #e0798a;
+}
+.container-fluid .filterRegion {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  color: #9c8c8c;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+}
+.container-fluid .filterRegion .filterSpan:first-child {
+  border: none;
+}
+.container-fluid .filterRegion .filterSpan {
+  padding: 20px;
+  margin: 0px 10px;
+  text-align: left;
+  border-top: 1px solid #9c8c8c;
+}
+.container-fluid .filterRegion .filterDiv {
+  height: 135px;
+  margin-top: 10px;
+  border: 1px solid #d4d4d4;
+}
+.container-fluid .errorPage {
+  border: 1px solid black;
+  padding: 20px;
+  color: #dc1d1d;
+  margin: 20px;
+  background-color: #dedede;
+  font-weight: bolder;
+}
+.container-fluid .viewOnMap {
+  margin: 10px 0px;
+  border: none;
+  color: #fff;
+  background: #e04f67;
+  padding: 12px 20px;
+  font-size: 12px;
+  transition: all 0.3s;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+.container-fluid .tableView {
+  border: 1px solid white;
+  padding: 0px;
+  background-color: white;
+  margin: 10px 0px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+.container-fluid .tableView .noPad {
+  padding: 0px;
+}
+.container-fluid .tableView .descStyles {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.container-fluid .tableView .reviewStyle {
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  visibility: visible;
+  animation-delay: 0.1s;
+  animation-name: fadeIn;
+}
+.container-fluid .tableView .borderRight {
+  padding: 0px !important;
+}
+.container-fluid .tableView .borderRight img {
+  width: 100%;
+  height: 270px;
+}
+.container-fluid .tableView .filter {
+  height: 340px;
+}
+.container-fluid .tableView .roundBox {
+  border-radius: 100%;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  height: 50px;
+  width: 50px;
+}
+.container-fluid .tableView .fontSet {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.container-fluid .tableView .singleReview {
+  padding: 20px;
+}
+.container-fluid .tableView .detailSection {
+  padding: 18px;
+}
+.container-fluid .tableView .detailSection .hotelSectionMain {
+  margin-bottom: 20px;
+}
+.container-fluid .tableView .detailSection .marginSet {
+  margin-top: 20px;
+}
+.container-fluid .tableView .detailSection .reviewButton {
+  border: none;
+  font-weight: 700;
+  color: #fff;
+  background: #51bce6;
+  transition: all 0.3s;
+  padding: 10px;
+  font-size: 15px;
+  width: 88%;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.container-fluid .tableView .detailSection .reviewButton:hover {
+  cursor: pointer;
+  background-color: #337ab7;
+}
+.container-fluid .tableView .detailSection .hotelNameStyles {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: Montserrat, Arial, sans-serif;
+}
+.container-fluid .tableView .detailSection .fontSet {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.container-fluid .tableView .detailSection .leftAlignText {
+  text-align: left;
+}
+.container-fluid .tableView .detailSection .rightAlignText {
+  text-align: right;
+}
+.container-fluid .tableView .detailSection .priceFont {
+  font-size: 30px;
+  color: #e74c3c;
+}
+.container-fluid .tableView .detailSection .reviewRatings {
+  text-align: center;
+  margin-top: 10px;
+}
+.container-fluid .tableView .detailSection .dateFormat {
+  text-transform: lowercase;
+  font-size: 12px;
+  color: #9c8c8c;
+}
+
+/*# sourceMappingURL=main.css.map */

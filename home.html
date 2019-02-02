@@ -1,0 +1,73 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" id="borderedImage">
+			<h2 class="hPirates"> Wanderlust </h2>
+			<div class="buttonStyles" ng-click="loadHotels()" ng-if="errorPage || !showLoadDetails "> Load More </div>
+		</div>
+		
+		<div class="row" ng-if="errorPage && !showLoadDetails">
+			<div class="col-md-12 col-lg-12 errorPage" >Internal Server Error : A team of highly trained pirates have been dispatched to deal with the situation
+			</div>
+		</div>
+		<div class="col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10" ng-if="showLoadDetails && !errorPage" >
+			<div class="col-md-3 col-lg-3">
+				<div class="viewOnMap">View On Map</div>
+				<div class="filterRegion">
+					Filters
+					<div class="filterSpan"> Price 
+						<div class="filterDiv"></div>
+					</div>
+					<div class="filterSpan"> Rating 
+						<div class="filterDiv"></div>
+					</div>
+					<div class="filterSpan"> Review Ratings 
+						<div class="filterDiv"></div>
+					</div>
+					<div class="filterSpan"> Countries 
+						<div class="filterDiv"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9 col-lg-9">
+				<div class="tableView col-md-12 col-lg-12" ng-repeat="hotel in hotels track by $index">
+					<div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 borderRight"> 
+				    <img src={{hotel.images[0]}} />
+					</div>
+
+					<div class="col-md-8 col-lg-8 col-sm-8 col-xs-8 detailSection">
+						<div class="row">
+							<div class="hotelNameStyles leftAlignText fontSet col-md-9 col-xs-9 col-sm-9">{{hotel.name}}</div>
+							<div class="hotelNameStyles rightAlignText col-md-3 col-xs-3"><span id="stars{{$index}}"></span></div>
+						</div>
+						<div class="hotelNameStyles hotelSectionMain leftAlignText">{{hotel.city}} - {{hotel.country}}</div>
+						<div class="hotelNameStyles descriptionHotel leftAlignText">Hotel Description : {{hotel.description}}</div>
+						<div class="row marginSet">
+							<div class="col-md-4 col-xs-4 leftAlignText" ng-click="showReview(hotel.id, $index)">
+								<div class="reviewButton"  ng-if="!div_[$index]"> Show Reviews </div>
+								<div class="reviewButton"  ng-if="div_[$index]"> Hide Reviews </div>
+							</div>
+							<div class="hotelNameStyles col-md-5 col-xs-5 reviewRatings">Review : <span id="reviews{{$index}}"></span></div>
+							<div class="hotelNameStyles priceFont rightAlignText col-md-3 col-xs-3">${{hotel.price}}</div>
+							<div class="hotelNameStyles rightAlignText dateFormat col-md-12 col-xs-12">{{hotel.date_start}} to {{hotel.date_end}} </div>
+						</div>
+					</div>
+
+					<div class="col-md-12 col-xs-12 marginSet noPad reviewStyle" ng-if="div_[$index]">
+						<div class="singleReview row" ng-repeat="review in reviews[$index]">
+							<div class="col-md-1 col-lg-1" ng-if="review.positive">
+								<div><i class="fa fa-thumbs-up" aria-hidden="true" style="color: gold; font-size:3rem;"></i></div>
+							</div>
+							<div class="col-md-1 col-lg-1" ng-if="review.positive === false">
+								<div><i class="fa fa-thumbs-down" aria-hidden="true" style="color: gold; font-size:3rem;"></i></div>
+							</div>
+							<div class="col-md-11 col-lg-11">
+								<div class="descStyles">{{review.name}}</div>
+								<div>{{review.comment}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
